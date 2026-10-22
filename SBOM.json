@@ -1,0 +1,69 @@
+{
+  "sbom_format": "VoiceForge-SBOM-1.0",
+  "application": {
+    "name": "VoiceForge Studio",
+    "version": "1.0.2",
+    "target_os": "Windows 10/11 x64",
+    "installer_filename": "VoiceForgeStudio_Setup_v1.0.2_x64.exe",
+    "application_license": "MIT",
+    "bundle_composite_license_notice": "Composite distribution containing MIT, LGPL-3.0-only, BSD-3-Clause, GPL-3.0-or-later (Piper and FFmpeg standalone CLI executables), and CC-BY-4.0 (default bundled en_US-libritts-high voice model trained from scratch on LibriTTS train-clean-360). See THIRD_PARTY_NOTICES.md."
+  },
+  "components": [
+    {
+      "name": "python",
+      "version": ">=3.11,<3.13",
+      "role": "Embedded CPython runtime packaged by PyInstaller",
+      "license": "PSF-2.0",
+      "source_url": "https://www.python.org/"
+    },
+    {
+      "name": "PySide6",
+      "version": ">=6.6.0,<6.9.0",
+      "role": "Desktop Qt6 graphical user interface framework (dynamically linked)",
+      "license": "LGPL-3.0-only",
+      "source_url": "https://pypi.org/project/PySide6/"
+    },
+    {
+      "name": "piper-tts",
+      "version": ">=1.2.0",
+      "role": "Local neural text-to-speech CLI engine (standalone subprocess)",
+      "license": "GPL-3.0-or-later (OHF-Voice/piper1-gpl) / MIT (rhasspy/piper <=1.2.0)",
+      "source_url": "https://github.com/OHF-Voice/piper1-gpl"
+    },
+    {
+      "name": "onnxruntime",
+      "version": ">=1.17.0,<2.0.0",
+      "role": "CPU neural network inference runtime",
+      "license": "MIT",
+      "source_url": "https://github.com/microsoft/onnxruntime"
+    },
+    {
+      "name": "numpy",
+      "version": ">=1.26.0,<2.3.0",
+      "role": "PCM audio array DSP processing",
+      "license": "BSD-3-Clause",
+      "source_url": "https://numpy.org/"
+    },
+    {
+      "name": "python-docx",
+      "version": ">=1.1.0,<2.0.0",
+      "role": "DOCX script file import/export",
+      "license": "MIT",
+      "source_url": "https://github.com/python-openxml/python-docx"
+    },
+    {
+      "name": "FFmpeg / FFprobe (Windows x64 GPL build with libmp3lame)",
+      "version": "master-latest-win64-gpl (>=6.0)",
+      "role": "External CLI media encoder/transcoder in vendor/ffmpeg/ (libmp3lame MP3 export)",
+      "license": "GPL-3.0-or-later",
+      "source_url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip"
+    },
+    {
+      "name": "en_US-libritts-high (Bundled Default Neural Voice)",
+      "version": "1.0.0",
+      "role": "Multi-speaker US English neural ONNX voice model trained from scratch on LibriTTS train-clean-360",
+      "license": "CC-BY-4.0",
+      "source_url": "https://huggingface.co/rhasspy/piper-voices/blob/main/en/en_US/libritts/high/MODEL_CARD"
+    }
+  ]
+}

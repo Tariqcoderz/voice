@@ -1,0 +1,32 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build & PyInstaller artifacts
+build/
+dist/
+*.spec
+!/VoiceForgeStudio.spec
+
+# Root-level user data only; do not ignore src/voiceforge/models/ Python source modules.
+/models/
+/release/
+*.onnx
+*.onnx.json
+*.part
+*.tmp
+*.wav
+*.mp3
+*.sqlite3
+logs/
+*.log
+temp/
+exports/
+projects/
